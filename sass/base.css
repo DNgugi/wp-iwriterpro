@@ -1,0 +1,195 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  line-height: 1.75;
+}
+
+.App .hidden {
+  left: -270px;
+  -webkit-transition: ease-out 1s;
+  transition: ease-out 1s;
+}
+
+.App .btn {
+  padding: 0.5em;
+  background-color: #512da8;
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.App .card {
+  border: 1px solid #212121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em;
+  margin: 1em;
+}
+
+.App .center {
+  text-align: center;
+}
+
+.App header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em;
+  background-color: #009688;
+  color: #ffffff;
+  height: 60px;
+}
+
+.App header span {
+  cursor: pointer;
+}
+
+.App aside {
+  height: calc(100vh - 60px);
+  width: 270px;
+  position: absolute;
+  background-color: #512da8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
+}
+
+.App aside a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.App main {
+  height: calc(100vh - 60px);
+  overflow-y: scroll;
+}
+
+.App main section {
+  min-height: 100%;
+  scroll-snap-align: start;
+}
+
+.App #welcome {
+  background-color: gold;
+  border: 1px solid palegoldenrod;
+  padding: 2em;
+}
+
+.App #welcome .text {
+  margin-top: 20%;
+  padding: 1em;
+}
+
+.App #welcome .form .error-text {
+  color: orangered;
+}
+
+.App #welcome .form form,
+.App #welcome .form .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App #services {
+  padding-top: 2em;
+}
+
+.App #support {
+  background-color: #512da8;
+  color: #ffffff;
+  padding-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App #support .card {
+  border-color: #ffffff;
+}
+
+.App #support .contacts p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App #support .contacts p a {
+  color: #ffffff;
+}
+
+.App #support .contacts p span {
+  margin-right: 0.5em;
+}
+
+.App footer {
+  padding: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .App #welcome {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+  .App #services {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 70px auto;
+        grid-template-rows: 70px auto;
+  }
+  .App #services .card {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .App #services .title {
+    grid-column: span 3;
+  }
+}
+/*# sourceMappingURL=base.css.map */
