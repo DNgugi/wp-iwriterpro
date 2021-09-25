@@ -7,13 +7,17 @@
   line-height: 1.75;
 }
 
-.App .hidden {
+ul {
+  list-style-type: none;
+}
+
+.hidden {
   left: -270px;
   -webkit-transition: ease-out 1s;
   transition: ease-out 1s;
 }
 
-.App .btn {
+.btn {
   padding: 0.5em;
   background-color: #512da8;
   color: #ffffff;
@@ -23,7 +27,7 @@
   margin-top: 1em;
 }
 
-.App .card {
+.card {
   border: 1px solid #212121;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,11 +40,11 @@
   margin: 1em;
 }
 
-.App .center {
+.center {
   text-align: center;
 }
 
-.App header {
+header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,21 +57,22 @@
   padding: 0.5em;
   background-color: #009688;
   color: #ffffff;
-  height: 60px;
+  max-height: 100px;
 }
 
-.App header span {
+header span {
   cursor: pointer;
 }
 
-.App aside {
-  height: calc(100vh - 60px);
+#main-nav {
+  height: calc(100vh - 100px);
   width: 270px;
   position: absolute;
   background-color: #512da8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-y: scroll;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -75,45 +80,41 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-transition: ease-in 1s;
   transition: ease-in 1s;
 }
 
-.App aside a {
+#main-nav a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.App main {
-  height: calc(100vh - 60px);
+main {
+  height: calc(100vh - 100px);
   overflow-y: scroll;
 }
 
-.App main section {
+main div {
   min-height: 100%;
   scroll-snap-align: start;
 }
 
-.App #welcome {
+#welcome {
   background-color: gold;
   border: 1px solid palegoldenrod;
   padding: 2em;
 }
 
-.App #welcome .text {
+#welcome .text {
   margin-top: 20%;
   padding: 1em;
 }
 
-.App #welcome .form .error-text {
+#welcome .form .error-text {
   color: orangered;
 }
 
-.App #welcome .form form,
-.App #welcome .form .input-group {
+#welcome .form form, #welcome .form .input-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -123,11 +124,11 @@
           flex-direction: column;
 }
 
-.App #services {
+#services {
   padding-top: 2em;
 }
 
-.App #support {
+#support {
   background-color: #512da8;
   color: #ffffff;
   padding-top: 2em;
@@ -143,11 +144,11 @@
           flex-direction: column;
 }
 
-.App #support .card {
+#support .card {
   border-color: #ffffff;
 }
 
-.App #support .contacts p {
+#support .contacts p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -156,27 +157,27 @@
           align-items: center;
 }
 
-.App #support .contacts p a {
+#support .contacts p a {
   color: #ffffff;
 }
 
-.App #support .contacts p span {
+#support .contacts p span {
   margin-right: 0.5em;
 }
 
-.App footer {
+footer {
   padding: 0.5em;
 }
 
 @media screen and (min-width: 768px) {
-  .App #welcome {
+  #welcome {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     gap: 2em;
   }
-  .App #services {
+  #services {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
@@ -184,11 +185,11 @@
     -ms-grid-rows: 70px auto;
         grid-template-rows: 70px auto;
   }
-  .App #services .card {
+  #services .card {
     -ms-flex-item-align: start;
         align-self: flex-start;
   }
-  .App #services .title {
+  #services .title {
     grid-column: span 3;
   }
 }

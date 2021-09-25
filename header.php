@@ -7,21 +7,21 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="sass/base.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;900&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;400;500;700;900&display=swap">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  
-  <!-- <title>iWriter Pro | Affordable Professional Writing</title> -->
-  	<?php wp_head(); ?>
+
+  <title><?php bloginfo( 'name' )?> | <?php bloginfo( 'description' )?></title>
+  <?php wp_head(); ?>
 </head>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 <header>
     <div class='branding'>
   <?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' );
+				the_custom_logo();
+				?></a></h1>
 				<?php
 			else :
 				?>

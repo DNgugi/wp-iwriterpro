@@ -1,8 +1,11 @@
 <?php
+/**
+ * The front page template file
+ *  
+ * @package iwriter
+ */
 
 get_header(); ?>
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
   <main class="container">
     <div id="welcome">
       <h2>Need a pro writer?</h2>
@@ -48,12 +51,5 @@ get_header(); ?>
      
     </div>
   </main>
-  <footer>
-    <p class="copyright center">
-      iWriter Pro &copy; 2021. A <a href="https://teambidii.co.ke" target="_blank">Team Bidii</a> Project.
-    </p>
-  </footer>
+  <?php get_footer(); ?>
 
-  <script src="js/base.js"></script>
-</body>
-</html>
