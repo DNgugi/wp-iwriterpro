@@ -86,7 +86,7 @@ a{
     flex-direction: column;
     align-items: center;
     //justify-content: center;
-    transition: ease-in 1s;
+    transition: ease-in 2s;
    
 
     a{
@@ -120,17 +120,13 @@ a{
       align-items: center;
       justify-content: center;
     }
-    .form{
-      //margin-top: 10%;
-      .error-text{
-        color: orangered;
-      }
-      form, .input-group{
-        display: flex;
-        flex-direction: column;
-        
-      }  
+    .form-widget{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
+    
   }
   #services{
     padding-top: 2em;
