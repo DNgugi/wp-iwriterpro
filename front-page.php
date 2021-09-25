@@ -8,13 +8,21 @@
 get_header(); ?>
   <main class="container">
     <div id="welcome">
-      <h2>Need a pro writer?</h2>
+     <div class="hero-text">
+        <h2>Need a pro writer?</h2>
       <h4>Get your project started right now!</h4>
       <a href="https://wa.me/254716585138" target="_blank">
       <button class="btn"><span class="material-icons">
         whatsapp
       </span> <span>WhatsApp Us</span></button>
-      </a>    
+      </a> 
+     </div>
+     <div class="form card">
+       <form action="">
+         <h2>Order Form Widget Here </h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur sunt deleniti enim, sint illo amet veritatis. Facere eligendi voluptatum repellat ipsum deserunt quia quis.</p>
+       </form>
+     </div>   
     </div>
     <div id="services">
       <h2 class="title center">Our Services</h2>

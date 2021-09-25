@@ -7,6 +7,11 @@
   line-height: 1.75;
 }
 
+a {
+  text-decoration: none;
+  color: indianred;
+}
+
 ul {
   list-style-type: none;
 }
@@ -64,6 +69,15 @@ header span {
   cursor: pointer;
 }
 
+header .site-title {
+  font-size: 2em;
+}
+
+header .site-title a {
+  color: gold;
+  text-decoration: none;
+}
+
 #main-nav {
   height: calc(100vh - 100px);
   width: 270px;
@@ -92,22 +106,35 @@ header span {
 main {
   height: calc(100vh - 100px);
   overflow-y: scroll;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 main div {
-  min-height: 100%;
   scroll-snap-align: start;
 }
 
 #welcome {
   background-color: gold;
-  border: 1px solid palegoldenrod;
   padding: 2em;
+  height: 100%;
 }
 
 #welcome .text {
   margin-top: 20%;
   padding: 1em;
+}
+
+#welcome .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #welcome .form .error-text {
@@ -126,9 +153,17 @@ main div {
 
 #services {
   padding-top: 2em;
+  min-height: 100%;
+}
+
+#services .card {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 #support {
+  height: 100%;
   background-color: #512da8;
   color: #ffffff;
   padding-top: 2em;
@@ -138,6 +173,9 @@ main div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -184,10 +222,6 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-rows: 70px auto;
         grid-template-rows: 70px auto;
-  }
-  #services .card {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
   }
   #services .title {
     grid-column: span 3;

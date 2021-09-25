@@ -20,6 +20,11 @@ $padding-sm: 0.5em;
  line-height: 1.75;
 }
 
+a{
+  text-decoration: none;
+  color: indianred;
+}
+
  ul{
       list-style-type: none;
     }
@@ -62,6 +67,13 @@ $padding-sm: 0.5em;
     span{
       cursor: pointer;
     }
+    .site-title{
+      font-size: 2em;
+      a{
+        color: gold;
+      text-decoration: none;
+      }
+    }
   }
   #main-nav{
     height: calc(100vh - 100px);
@@ -80,29 +92,33 @@ $padding-sm: 0.5em;
     a{
       color: $text-color;
       text-decoration: none;
-      
     }
   }
   main{
     height: calc(100vh - 100px);
     overflow-y: scroll;
-    //scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory;
 
-    div{
-      min-height: 100%;
+     div{
+      // min-height: 100%;
       scroll-snap-align: start;
 
-    }
+     }
     
   }
   #welcome{
     background-color: gold;
-    border: 1px solid palegoldenrod;
     padding: 2em;
+    height: 100%;
     .text{
       margin-top: 20%;
       padding: 1em;
       //border: 1px solid black;
+    }
+    .btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .form{
       //margin-top: 10%;
@@ -118,13 +134,19 @@ $padding-sm: 0.5em;
   }
   #services{
     padding-top: 2em;
+    min-height: 100%;
+    .card{
+      height: max-content;
+    }
   }
   #support{
+    height: 100%;
     background-color: $primary-color-dark;
     color: $text-color;
     padding-top: 2em;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     .card{
       border-color: $text-color;
@@ -157,9 +179,7 @@ $padding-sm: 0.5em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 70px auto;
-  .card{
-    align-self: flex-start;
-  }
+ 
   .title{
     grid-column: span 3;
   }
