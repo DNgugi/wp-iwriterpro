@@ -68,10 +68,11 @@ add_action( 'after_setup_theme', 'iwriter_setup' );
 function add_iwriter_scripts() {
 	wp_enqueue_style( 'iwriter-style', get_stylesheet_uri(), array(), IWRITER_VERSION );
 	//wp_style_add_data( 'iwriter-style', 'rtl', 'replace' );
-  wp_enqueue_style( 'iwriter-base-style', get_template_directory_uri() . '/sass/base.css', array('iwriter-style'), time());
-  wp_enqueue_style( 'raleway', '//fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;900&display=swap');
-  wp_enqueue_style( 'lato', '//fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;400;500;700;900&display=swap');
-  wp_enqueue_style( 'material-css', '//fonts.googleapis.com/icon?family=Material+Icons');
+ 
+  wp_enqueue_style( 'raleway', 'https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;900&display=swap');
+  wp_enqueue_style( 'lato', 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;400;500;700;900&display=swap');
+  wp_enqueue_style( 'material-css', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+   wp_enqueue_style( 'iwriter-base-style', get_template_directory_uri() . '/sass/base.css', null, time());
   
 
 
