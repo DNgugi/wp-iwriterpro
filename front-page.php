@@ -19,7 +19,7 @@ get_header(); ?>
      </div>
      <div class="form card">
        <div class="form-widget">
-         <?php dynamic_sidebar( 'order-form-sidebar' );
+         <?php get_sidebar( 'order-form' );
        ?>
        </div>
        <!-- <form action="">
