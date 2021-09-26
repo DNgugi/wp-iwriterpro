@@ -18,10 +18,14 @@ get_header(); ?>
       </a> 
      </div>
      <div class="form card">
-       <form action="">
+       <div class="form-widget">
+         <?php get_sidebar( 'order-form' );
+       ?>
+       </div>
+       <!-- <form action="">
          <h2>Order Form Widget Here </h2>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In consectetur sunt deleniti enim, sint illo amet veritatis. Facere eligendi voluptatum repellat ipsum deserunt quia quis.</p>
-       </form>
+       </form> -->
      </div>   
     </div>
     <div id="services">

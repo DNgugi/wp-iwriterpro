@@ -47,6 +47,9 @@ get_header();
     _e( 'Sorry, no posts matched your criteria.', 'iwriter' ); 
 		endif; ?>
 		</div>
+		<div>
+			<?php get_sidebar( 'sidebar-1' ); ?>
+	</div>
 		<?php
 		get_footer( );
 		?>

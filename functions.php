@@ -68,10 +68,10 @@ add_action( 'after_setup_theme', 'iwriter_setup' );
 function add_iwriter_scripts() {
 	wp_enqueue_style( 'iwriter-style', get_stylesheet_uri(), array(), IWRITER_VERSION );
 	//wp_style_add_data( 'iwriter-style', 'rtl', 'replace' );
-  wp_enqueue_style( 'iwriter-base-style', get_template_directory_uri() . '/sass/base.css', array('iwriter-style'), IWRITER_VERSION);
-  wp_enqueue_style( 'raleway', 'https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;900&display=swap');
-  wp_enqueue_style( 'lato', 'https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;400;500;700;900&display=swap');
-  wp_enqueue_style( 'material-css', 'https://fonts.googleapis.com/icon?family=Material+Icons');
+  wp_enqueue_style( 'iwriter-base-style', get_template_directory_uri() . '/sass/base.css', array('iwriter-style'), time());
+  wp_enqueue_style( 'raleway', '//fonts.googleapis.com/css2?family=Raleway:wght@100;400;500;700;900&display=swap');
+  wp_enqueue_style( 'lato', '//fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Raleway:wght@100;400;500;700;900&display=swap');
+  wp_enqueue_style( 'material-css', '//fonts.googleapis.com/icon?family=Material+Icons');
   
 
 
@@ -83,3 +83,26 @@ function add_iwriter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'add_iwriter_scripts' );
+
+
+function iwriter_sidebars_init() {
+    register_sidebar( array(
+        'name'          => __( 'Order Form', 'iwriter' ),
+        'id'            => 'order-form-sidebar',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+ 
+    register_sidebar( array(
+        'name'          => __( 'Main Sidebar', 'theme_name' ),
+        'id'            => 'sidebar-1',
+        'before_widget' => '<ul><li id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</li></ul>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ) );
+}
+
+add_action( 'widgets_init', 'iwriter_sidebars_init' );

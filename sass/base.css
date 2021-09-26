@@ -12,6 +12,11 @@ a {
   color: indianred;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 ul {
   list-style-type: none;
 }
@@ -94,8 +99,8 @@ header .site-title a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: ease-in 1s;
-  transition: ease-in 1s;
+  -webkit-transition: ease-in 2s;
+  transition: ease-in 2s;
 }
 
 #main-nav a {
@@ -106,8 +111,9 @@ header .site-title a {
 main {
   height: calc(100vh - 100px);
   overflow-y: scroll;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+  margin: 0 auto;
 }
 
 main div {
@@ -137,14 +143,16 @@ main div {
           justify-content: center;
 }
 
-#welcome .form .error-text {
-  color: orangered;
-}
-
-#welcome .form form, #welcome .form .input-group {
+#welcome .form-widget {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -225,6 +233,16 @@ footer {
   }
   #services .title {
     grid-column: span 3;
+  }
+  .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 80% 20%;
+        grid-template-columns: 80% 20%;
+    padding: 1em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=base.css.map */
